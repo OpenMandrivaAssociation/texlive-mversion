@@ -1,3 +1,9 @@
+# revision 24330
+# category Package
+# catalog-ctan /macros/latex/contrib/mversion
+# catalog-date 2011-10-19 16:05:14 +0200
+# catalog-license lppl1.2
+# catalog-version 1.0
 Name:		texlive-mversion
 Version:	1.0
 Release:	1
@@ -47,6 +53,7 @@ build number describing the progress of your document.
 #- source
 %doc %{_texmfdistdir}/source/latex/mversion/mVersion.dtx
 %doc %{_texmfdistdir}/source/latex/mversion/mVersion.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -57,3 +64,5 @@ build number describing the progress of your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
