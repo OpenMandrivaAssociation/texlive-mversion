@@ -1,12 +1,12 @@
-# revision 24330
+# revision 29370
 # category Package
 # catalog-ctan /macros/latex/contrib/mversion
-# catalog-date 2011-10-19 16:05:14 +0200
+# catalog-date 2013-03-13 13:37:29 +0100
 # catalog-license lppl1.2
-# catalog-version 1.0
+# catalog-version 1.0.1
 Name:		texlive-mversion
-Version:	1.0
-Release:	2
+Version:	1.0.1
+Release:	1
 Summary:	Keeping track of document versions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mversion
@@ -53,17 +53,3 @@ build number describing the progress of your document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 754240
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 719093
-- texlive-mversion
-- texlive-mversion
-- texlive-mversion
-- texlive-mversion
-
