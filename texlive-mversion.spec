@@ -6,7 +6,7 @@
 # catalog-version 1.0.1
 Name:		texlive-mversion
 Version:	1.0.1
-Release:	8
+Release:	9
 Summary:	Keeping track of document versions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mversion
