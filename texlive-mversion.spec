@@ -1,19 +1,13 @@
-# revision 29370
-# category Package
-# catalog-ctan /macros/latex/contrib/mversion
-# catalog-date 2013-03-13 13:37:29 +0100
-# catalog-license lppl1.2
-# catalog-version 1.0.1
 Name:		texlive-mversion
-Version:	1.0.1
-Release:	10
+Version:	29370
+Release:	1
 Summary:	Keeping track of document versions
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mversion
 License:	LPPL1.2
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ the header or footer, each page can be marked with the unique
 build number describing the progress of your document.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,7 +40,8 @@ build number describing the progress of your document.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
