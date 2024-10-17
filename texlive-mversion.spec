@@ -3,7 +3,7 @@ Version:	29370
 Release:	2
 Summary:	Keeping track of document versions
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/mversion
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/mversion
 License:	LPPL1.2
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mversion.doc.r%{version}.tar.xz
